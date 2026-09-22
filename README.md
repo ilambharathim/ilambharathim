@@ -1,27 +1,20 @@
 <div align="center">
 
-<!-- 👤 HIGHLIGHTED PROFILE AVATAR WITH COSMIC HALO -->
-<a href="https://github.com/ilambharathim">
-  <img src="./avatar.jpg" width="130" height="130" style="border-radius: 50%; border: 3px solid #38BDF8;" alt="Ilam Bharathi">
-</a>
-
-<br><br>
-
-<!-- 🌌 GALAXY & SPARKLING CIRCUIT ANIMATED HEADER -->
+<!-- 🌌 DEEP SPACE GALAXY & SPARKLING CIRCUIT HEADER -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./header.svg">
   <source media="(prefers-color-scheme: light)" srcset="./header-light.svg">
-  <img src="./header.svg" width="100%" alt="Ilam Bharathi — Cosmic Circuit Architecture Header">
+  <img src="./header.svg" width="100%" alt="Ilam Bharathi — Deep Space Galaxy Circuit Header">
 </picture>
 
 <br><br>
 
-<!-- ⚡ LIVE HARDWARE TELEMETRY & BENCHMARKS -->
+<!-- ⚡ FLOATING TELEMETRY CONSOLE -->
 <img src="./telemetry.svg" width="100%" alt="Engineering Telemetry Dashboard">
 
 <br><br>
 
-<!-- ✧ COSMIC GALAXY DIVIDER -->
+<!-- ✧ COSMIC GALAXY STARDUST DIVIDER -->
 <img src="./galaxy_divider.svg" width="100%" alt="Galaxy Divider">
 
 </div>
@@ -32,35 +25,39 @@
 
 ## 🔮 01 // CORE ARCHITECTURAL DOMAINS
 
-<table width="100%">
+<table width="100%" style="border-collapse: separate; border-spacing: 12px;">
   <tr>
-    <td width="25%" align="center" style="background-color:#0D1117; padding:12px;">
-      <h4 style="color:#F59E0B; margin:4px 0;">⚡ VLSI &amp; FAB</h4>
-      <p style="color:#8B949E; font-size:12px; margin:0;">
+    <td width="25%" align="center" style="background: #090E1A; border: 1.5px solid #1E293B; border-radius: 18px; padding: 18px;">
+      <div style="font-size: 18px;">⚡</div>
+      <h4 style="color: #F59E0B; margin: 6px 0;">VLSI &amp; FAB</h4>
+      <p style="color: #94A3B8; font-size: 12px; margin: 0;">
         <b>22nm FinFET • 180nm CMOS</b><br>
         6T SRAM Bitcell • PVT Corners<br>
         KLayout • SEMulator3D
       </p>
     </td>
-    <td width="25%" align="center" style="background-color:#0D1117; padding:12px;">
-      <h4 style="color:#38BDF8; margin:4px 0;">💻 RTL DESIGN</h4>
-      <p style="color:#8B949E; font-size:12px; margin:0;">
+    <td width="25%" align="center" style="background: #090E1A; border: 1.5px solid #1E293B; border-radius: 18px; padding: 18px;">
+      <div style="font-size: 18px;">💻</div>
+      <h4 style="color: #38BDF8; margin: 6px 0;">RTL DESIGN</h4>
+      <p style="color: #94A3B8; font-size: 12px; margin: 0;">
         <b>SystemVerilog • Verilog • VHDL</b><br>
         Pipelined Datapaths • FSM Control<br>
-        Static Timing Analysis &amp; CDC
+        STA &amp; Clock Domain Crossing
       </p>
     </td>
-    <td width="25%" align="center" style="background-color:#0D1117; padding:12px;">
-      <h4 style="color:#34D399; margin:4px 0;">🔍 VERIFICATION</h4>
-      <p style="color:#8B949E; font-size:12px; margin:0;">
+    <td width="25%" align="center" style="background: #090E1A; border: 1.5px solid #1E293B; border-radius: 18px; padding: 18px;">
+      <div style="font-size: 18px;">🔍</div>
+      <h4 style="color: #34D399; margin: 6px 0;">VERIFICATION</h4>
+      <p style="color: #94A3B8; font-size: 12px; margin: 0;">
         <b>Synopsys VCS • Verdi</b><br>
         Cadence Xcelium &amp; Spectre<br>
         SVA Assertions • Zero Violations
       </p>
     </td>
-    <td width="25%" align="center" style="background-color:#0D1117; padding:12px;">
-      <h4 style="color:#A855F7; margin:4px 0;">🚀 FPGA &amp; EDGE AI</h4>
-      <p style="color:#8B949E; font-size:12px; margin:0;">
+    <td width="25%" align="center" style="background: #090E1A; border: 1.5px solid #1E293B; border-radius: 18px; padding: 18px;">
+      <div style="font-size: 18px;">🚀</div>
+      <h4 style="color: #A855F7; margin: 6px 0;">FPGA &amp; EDGE AI</h4>
+      <p style="color: #94A3B8; font-size: 12px; margin: 0;">
         <b>PolarFire SoC (RISC-V)</b><br>
         Neuromorphic SNN Inference<br>
         AMD Xilinx Vivado Acceleration
@@ -79,29 +76,27 @@
 
 ---
 
-## 🛸 02 // INTERACTIVE PROJECT DOSSIERS
-> *Click any project drawer below to expand architectural schematics, waveform captures, and verification metrics.*
+## 🛸 02 // FLOATING PROJECT DOSSIERS
+> *Click on any floating capsule below to launch the interactive architectural popup.*
 
 <br>
 
-<!-- PROJECT 01 -->
+<!-- FLOATING CAPSULE 01 -->
 <details>
-<summary style="cursor:pointer; font-size:15px; font-weight:bold; color:#38BDF8;">
-  <b>⚡ [PROJECT 01] RIVA ── RTL Intelligent Verification Assistant</b> &nbsp; <code>ACTIVE</code>
+<summary style="cursor: pointer; padding: 16px 20px; background: #0A0F1D; border: 1.5px solid #38BDF8; border-radius: 18px; list-style: none;">
+  <span style="font-size: 15px; font-weight: bold; color: #38BDF8;">⚡ [PROJECT 01] RIVA ── RTL Intelligent Verification Assistant</span> &nbsp; <code style="color: #34D399; border: 1px solid #34D399; border-radius: 10px; padding: 2px 8px;">ACTIVE</code>
   <br>
-  <span style="color:#8B949E; font-size:12.5px; font-weight:normal;">▶ SystemVerilog • Logic Simulation • Waveform Analysis • Assertion Synthesis</span>
+  <span style="color: #94A3B8; font-size: 12.5px;">SystemVerilog • Logic Simulation • Waveform Analysis • SVA Assertion Traps</span>
 </summary>
-<br>
-
-<table width="100%">
+<table width="100%" style="background: #050811; border: 1px solid #1E293B; border-radius: 16px; padding: 15px; margin-top: 10px;">
   <tr>
-    <td style="background-color:#0D1117; padding:15px;">
-      <p><b>Summary:</b> Automated verification framework combining SystemVerilog testbenches, simulation regressions, waveform analysis, and linting rules for specification-driven verification closure.</p>
+    <td>
+      <p style="color: #E2E8F0;"><b>Overview:</b> Automated verification framework combining SystemVerilog testbenches, simulation regressions, waveform analysis, and linting rules for specification-driven verification closure.</p>
       <p><b>Repository:</b> <a href="https://github.com/ilambharathim/AI_RTL_ASSISTANT">github.com/ilambharathim/AI_RTL_ASSISTANT</a></p>
       <div align="center">
         <img src="./waveform_analysis.svg" width="100%" alt="RIVA Waveform Timing Simulation Trace">
       </div>
-      <p style="font-size:12px; color:#8B949E;"><b>Timing Status:</b> 100% protocol assertions verified (<code>assert_handshake_valid</code>) across Cadence Xcelium and Synopsys VCS.</p>
+      <p style="font-size: 12px; color: #94A3B8;"><b>Timing Verification:</b> 100% protocol assertions passing (<code>assert_handshake_valid</code>) across Cadence Xcelium and Synopsys VCS.</p>
     </td>
   </tr>
 </table>
@@ -109,28 +104,26 @@
 
 <br>
 
-<!-- PROJECT 02 -->
+<!-- FLOATING CAPSULE 02 -->
 <details>
-<summary style="cursor:pointer; font-size:15px; font-weight:bold; color:#A855F7;">
-  <b>🚀 [PROJECT 02] SNN-Based Object Detection ── Microchip PolarFire SoC</b> &nbsp; <code>RESEARCH</code>
+<summary style="cursor: pointer; padding: 16px 20px; background: #0A0F1D; border: 1.5px solid #A855F7; border-radius: 18px; list-style: none;">
+  <span style="font-size: 15px; font-weight: bold; color: #A855F7;">🚀 [PROJECT 02] SNN-Based Object Detection ── Microchip PolarFire SoC</span> &nbsp; <code style="color: #A855F7; border: 1px solid #A855F7; border-radius: 10px; padding: 2px 8px;">RESEARCH</code>
   <br>
-  <span style="color:#8B949E; font-size:12.5px; font-weight:normal;">▶ Spiking Neural Networks • PolarFire SoC FPGA • RISC-V Hardware Acceleration</span>
+  <span style="color: #94A3B8; font-size: 12.5px;">Spiking Neural Networks • PolarFire SoC FPGA • RISC-V Hardware Acceleration</span>
 </summary>
-<br>
-
-<table width="100%">
+<table width="100%" style="background: #050811; border: 1px solid #1E293B; border-radius: 16px; padding: 15px; margin-top: 10px;">
   <tr>
-    <td style="background-color:#0D1117; padding:15px;">
-      <p><b>Summary:</b> Hardware-oriented deployment of Spiking Neural Networks (SNN) on the Microchip PolarFire SoC FPGA, utilizing spike-timing dynamics and weight quantization for ultra-low power edge vision.</p>
+    <td>
+      <p style="color: #E2E8F0;"><b>Overview:</b> Hardware-oriented deployment of Spiking Neural Networks (SNN) on the PolarFire SoC FPGA platform, optimizing spike-timing dynamics and weight quantization for resource-constrained edge vision.</p>
       <pre>
-PolarFire SoC Subsystem:
-┌────────────────────────┐      AXI4 Bus      ┌────────────────────────────────┐
-│ 4x 64-bit RISC-V Cores │ ◀────────────────▶ │ Neuromorphic SNN Accelerator   │
-│ (Supervisory Control)  │                    │ • Leaky Integrate & Fire (LIF) │
-└────────────────────────┘                    │ • Event-Driven Spike Sparsity  │
-                                              └────────────────────────────────┘
+  PolarFire SoC FPGA Subsystem:
+  ┌────────────────────────┐      AXI4 Bus      ┌────────────────────────────────┐
+  │ 4x 64-bit RISC-V Cores │ ◀────────────────▶ │ Neuromorphic SNN Accelerator   │
+  │ (Supervisory Control)  │                    │ • Leaky Integrate & Fire (LIF) │
+  └────────────────────────┘                    │ • Event-Driven Spike Sparsity  │
+                                                └────────────────────────────────┘
       </pre>
-      <p style="font-size:12px; color:#8B949E;"><b>Key Optimization:</b> Eliminates matrix multiplications during static video frames via event-driven spike sparsity.</p>
+      <p style="font-size: 12px; color: #94A3B8;"><b>Power Efficiency:</b> Exploits PolarFire non-volatile flash architecture for near-zero static leakage power.</p>
     </td>
   </tr>
 </table>
@@ -138,22 +131,20 @@ PolarFire SoC Subsystem:
 
 <br>
 
-<!-- PROJECT 03 -->
+<!-- FLOATING CAPSULE 03 -->
 <details>
-<summary style="cursor:pointer; font-size:15px; font-weight:bold; color:#F59E0B;">
-  <b>🔶 [PROJECT 03] 22 nm 6T FinFET SRAM Cell ── Area Scaling &amp; Layout</b> &nbsp; <code>TAPEOUT READY</code>
+<summary style="cursor: pointer; padding: 16px 20px; background: #0A0F1D; border: 1.5px solid #F59E0B; border-radius: 18px; list-style: none;">
+  <span style="font-size: 15px; font-weight: bold; color: #F59E0B;">🔶 [PROJECT 03] 22 nm 6T FinFET SRAM Cell ── Area Scaling &amp; Layout</span> &nbsp; <code style="color: #F59E0B; border: 1px solid #F59E0B; border-radius: 10px; padding: 2px 8px;">TAPEOUT READY</code>
   <br>
-  <span style="color:#8B949E; font-size:12.5px; font-weight:normal;">▶ 22nm FinFET • 6T SRAM • KLayout • SEMulator3D • Synopsys Custom Compiler</span>
+  <span style="color: #94A3B8; font-size: 12.5px;">22nm FinFET • 6T SRAM • KLayout • SEMulator3D • Synopsys Custom Compiler</span>
 </summary>
-<br>
-
-<table width="100%">
+<table width="100%" style="background: #050811; border: 1px solid #1E293B; border-radius: 16px; padding: 15px; margin-top: 10px;">
   <tr>
-    <td style="background-color:#0D1117; padding:15px;">
-      <p><b>Summary:</b> Designed and analysed a 6-Transistor (6T) FinFET SRAM cell to evaluate fin pitch scaling, Static Noise Margins (SNM), and 3D physical process profiles.</p>
-      <ul>
-        <li><b>Fin Pitch:</b> 30 nm with minimized inter-fin parasitic capacitance.</li>
-        <li><b>Read SNM:</b> &gt; 180 mV ensuring non-destructive read under process variation.</li>
+    <td>
+      <p style="color: #E2E8F0;"><b>Overview:</b> Designed and analysed a 6-Transistor (6T) FinFET SRAM memory cell to study fin pitch scaling, Static Noise Margins (SNM), and 3D physical process profiles.</p>
+      <ul style="color: #94A3B8;">
+        <li><b>Fin Pitch:</b> 30 nm with minimized parasitic capacitance between adjacent fins.</li>
+        <li><b>Read SNM:</b> &gt; 180 mV ensuring non-destructive read operations under process variation.</li>
         <li><b>Hold SNM:</b> &gt; 280 mV with stable data retention down to {DD,min} = 0.65	ext{V}$.</li>
       </ul>
     </td>
@@ -163,22 +154,20 @@ PolarFire SoC Subsystem:
 
 <br>
 
-<!-- PROJECT 04 -->
+<!-- FLOATING CAPSULE 04 -->
 <details>
-<summary style="cursor:pointer; font-size:15px; font-weight:bold; color:#34D399;">
-  <b>🟢 [PROJECT 04] 180 nm CMOS Capacitance-to-Digital Converter</b> &nbsp; <code>ANALOG AMS</code>
+<summary style="cursor: pointer; padding: 16px 20px; background: #0A0F1D; border: 1.5px solid #34D399; border-radius: 18px; list-style: none;">
+  <span style="font-size: 15px; font-weight: bold; color: #34D399;">🟢 [PROJECT 04] 180 nm CMOS Capacitance-to-Digital Converter</span> &nbsp; <code style="color: #34D399; border: 1px solid #34D399; border-radius: 10px; padding: 2px 8px;">ANALOG AMS</code>
   <br>
-  <span style="color:#8B949E; font-size:12.5px; font-weight:normal;">▶ Cadence Virtuoso • Spectre • 180nm Bulk CMOS • Switched-Capacitor PVT</span>
+  <span style="color: #94A3B8; font-size: 12.5px;">Cadence Virtuoso • Spectre • 180nm Bulk CMOS • Switched-Capacitor PVT</span>
 </summary>
-<br>
-
-<table width="100%">
+<table width="100%" style="background: #050811; border: 1px solid #1E293B; border-radius: 16px; padding: 15px; margin-top: 10px;">
   <tr>
-    <td style="background-color:#0D1117; padding:15px;">
-      <p><b>Summary:</b> Transistor-level design and simulation of a switched-capacitor CDC with comprehensive AC, transient, and parasitic evaluation across -40°C to 125°C PVT corners.</p>
-      <ul>
+    <td>
+      <p style="color: #E2E8F0;"><b>Overview:</b> Transistor-level design and simulation of a switched-capacitor CDC with comprehensive AC, transient, and parasitic evaluation across -40°C to 125°C PVT corners.</p>
+      <ul style="color: #94A3B8;">
         <li><b>Sensitivity:</b> &lt; 0.15% deviation across ±10% {DD}$ supply variations.</li>
-        <li><b>Resolution:</b> Monotonic 10-bit digital representation of micro-capacitive sensor inputs.</li>
+        <li><b>Resolution:</b> Monotonic 10-bit digital representation of micro-capacitive inputs.</li>
       </ul>
     </td>
   </tr>
@@ -187,23 +176,21 @@ PolarFire SoC Subsystem:
 
 <br>
 
-<!-- PROJECT 05 -->
+<!-- FLOATING CAPSULE 05 -->
 <details>
-<summary style="cursor:pointer; font-size:15px; font-weight:bold; color:#38BDF8;">
-  <b>🔷 [PROJECT 05] 4.8 GHz PLL Analog &amp; Mixed-Signal Verification</b> &nbsp; <code>VERIFIED</code>
+<summary style="cursor: pointer; padding: 16px 20px; background: #0A0F1D; border: 1.5px solid #38BDF8; border-radius: 18px; list-style: none;">
+  <span style="font-size: 15px; font-weight: bold; color: #38BDF8;">🔷 [PROJECT 05] 4.8 GHz PLL Analog &amp; Mixed-Signal Verification</span> &nbsp; <code style="color: #38BDF8; border: 1px solid #38BDF8; border-radius: 10px; padding: 2px 8px;">VERIFIED</code>
   <br>
-  <span style="color:#8B949E; font-size:12.5px; font-weight:normal;">▶ Cadence Virtuoso • Spectre • PFD • Charge Pump • Loop Filter • Phase Noise</span>
+  <span style="color: #94A3B8; font-size: 12.5px;">Cadence Virtuoso • Spectre • PFD • Charge Pump • Loop Filter • Phase Noise</span>
 </summary>
-<br>
-
-<table width="100%">
+<table width="100%" style="background: #050811; border: 1px solid #1E293B; border-radius: 16px; padding: 15px; margin-top: 10px;">
   <tr>
-    <td style="background-color:#0D1117; padding:15px;">
-      <p><b>Summary:</b> Verified a 4.8 GHz Phase-Locked Loop subsystem validating lock range, jitter budget, phase noise, and open-loop stability.</p>
-      <ul>
-        <li><b>Lock Range:</b> 4.4 GHz to 5.2 GHz with $&lt; 1.8\ \mu	ext{s}$ settling response.</li>
-        <li><b>Phase Noise:</b> $-112	ext{ dBc/Hz}$ offset at 1 MHz.</li>
-        <li><b>Phase Margin:</b> ^\circ$ stability margin across all corners.</li>
+    <td>
+      <p style="color: #E2E8F0;"><b>Overview:</b> Verified a 4.8 GHz Phase-Locked Loop subsystem validating lock range, settling behavior, jitter performance, and open-loop stability.</p>
+      <ul style="color: #94A3B8;">
+        <li><b>Lock Range:</b> 4.4 GHz to 5.2 GHz with fast settling response (&lt; 1.8 µs).</li>
+        <li><b>Phase Noise:</b> -112 dBc/Hz offset at 1 MHz.</li>
+        <li><b>Phase Margin:</b> 58° open-loop stability margin across all corners.</li>
       </ul>
     </td>
   </tr>
@@ -212,19 +199,17 @@ PolarFire SoC Subsystem:
 
 <br>
 
-<!-- PROJECT 06 -->
+<!-- FLOATING CAPSULE 06 -->
 <details>
-<summary style="cursor:pointer; font-size:15px; font-weight:bold; color:#EC4899;">
-  <b>🔴 [PROJECT 06] Gesture-to-Speech FPGA System</b> &nbsp; <code>HARDWARE DEMO</code>
+<summary style="cursor: pointer; padding: 16px 20px; background: #0A0F1D; border: 1.5px solid #EC4899; border-radius: 18px; list-style: none;">
+  <span style="font-size: 15px; font-weight: bold; color: #EC4899;">🔴 [PROJECT 06] Gesture-to-Speech FPGA System</span> &nbsp; <code style="color: #EC4899; border: 1px solid #EC4899; border-radius: 10px; padding: 2px 8px;">HARDWARE DEMO</code>
   <br>
-  <span style="color:#8B949E; font-size:12.5px; font-weight:normal;">▶ Verilog HDL • AMD Xilinx Vivado • Synchronous FSM • Real-Time DSP</span>
+  <span style="color: #94A3B8; font-size: 12.5px;">Verilog HDL • AMD Xilinx Vivado • Synchronous FSM • Real-Time DSP</span>
 </summary>
-<br>
-
-<table width="100%">
+<table width="100%" style="background: #050811; border: 1px solid #1E293B; border-radius: 16px; padding: 15px; margin-top: 10px;">
   <tr>
-    <td style="background-color:#0D1117; padding:15px;">
-      <p><b>Summary:</b> Offline FPGA hardware translating analog flex-sensor kinematic profiles into synthesized audio indices using a low-latency Verilog FSM with deterministic $&lt; 15	ext{ ms}$ response.</p>
+    <td>
+      <p style="color: #E2E8F0;"><b>Overview:</b> Offline FPGA hardware translating analog flex-sensor kinematic profiles into synthesized audio indices using a low-latency Verilog FSM with deterministic &lt; 15 ms response.</p>
     </td>
   </tr>
 </table>
@@ -232,19 +217,17 @@ PolarFire SoC Subsystem:
 
 <br>
 
-<!-- PROJECT 07 -->
+<!-- FLOATING CAPSULE 07 -->
 <details>
-<summary style="cursor:pointer; font-size:15px; font-weight:bold; color:#10B981;">
-  <b>✨ [PROJECT 07] [SEMICON India 2026] Semiconductor Image Restoration</b> &nbsp; <code>SOTA WINNER</code>
+<summary style="cursor: pointer; padding: 16px 20px; background: #0A0F1D; border: 1.5px solid #10B981; border-radius: 18px; list-style: none;">
+  <span style="font-size: 15px; font-weight: bold; color: #10B981;">✨ [PROJECT 07] [SEMICON India 2026] Semiconductor Image Restoration</span> &nbsp; <code style="color: #10B981; border: 1px solid #10B981; border-radius: 10px; padding: 2px 8px;">SOTA WINNER</code>
   <br>
-  <span style="color:#8B949E; font-size:12.5px; font-weight:normal;">▶ PyTorch 2.0 • NAFNet • SEM Metrology • 35.10 dB PSNR • KLA Track PS01</span>
+  <span style="color: #94A3B8; font-size: 12.5px;">PyTorch 2.0 • NAFNet • SEM Metrology • 35.10 dB PSNR • KLA Track PS01</span>
 </summary>
-<br>
-
-<table width="100%">
+<table width="100%" style="background: #050811; border: 1px solid #1E293B; border-radius: 16px; padding: 15px; margin-top: 10px;">
   <tr>
-    <td style="background-color:#0D1117; padding:15px;">
-      <p><b>Summary:</b> Single-stage deep learning restoration architecture for degraded Scanning Electron Microscope (SEM) semiconductor inspection signals.</p>
+    <td>
+      <p style="color: #E2E8F0;"><b>Overview:</b> Single-stage deep learning restoration architecture for degraded Scanning Electron Microscope (SEM) semiconductor inspection signals.</p>
       <p><b>Repository:</b> <a href="https://github.com/ilambharathim/TEAM-KIRAH_KLA_PSO1">github.com/ilambharathim/TEAM-KIRAH_KLA_PSO1</a></p>
       <table width="100%">
         <tr>
@@ -308,24 +291,24 @@ PolarFire SoC Subsystem:
 ## 💼 04 // EXPERIENCE TIMELINE
 
 <details>
-<summary style="cursor:pointer; font-size:14px; font-weight:bold; color:#38BDF8;">
-  <b>🏢 May 2026 – Jun 2026 ── Research Intern // IIITDM Kancheepuram</b>
+<summary style="cursor: pointer; padding: 12px 18px; background: #0A0F1D; border: 1.5px solid #38BDF8; border-radius: 14px; margin-bottom: 8px; list-style: none;">
+  <span style="font-size: 14px; font-weight: bold; color: #38BDF8;">🏢 May 2026 – Jun 2026 ── Research Intern // IIITDM Kancheepuram</span>
 </summary>
-<p style="padding-left:15px; color:#8B949E;">Researched hardware-efficient AI accelerator architectures for edge platforms, studying low-bit quantization and memory bandwidth optimization for resource-constrained inference.</p>
+<p style="padding: 10px 18px; color: #94A3B8;">Researched hardware-efficient AI accelerator architectures for edge platforms, studying low-bit quantization and memory bandwidth optimization for resource-constrained inference.</p>
 </details>
 
 <details>
-<summary style="cursor:pointer; font-size:14px; font-weight:bold; color:#F59E0B;">
-  <b>🏢 Oct 2025 – Nov 2025 ── Project Intern // Synopsys Centre of Excellence (CIT)</b>
+<summary style="cursor: pointer; padding: 12px 18px; background: #0A0F1D; border: 1.5px solid #F59E0B; border-radius: 14px; margin-bottom: 8px; list-style: none;">
+  <span style="font-size: 14px; font-weight: bold; color: #F59E0B;">🏢 Oct 2025 – Nov 2025 ── Project Intern // Synopsys Centre of Excellence (CIT)</span>
 </summary>
-<p style="padding-left:15px; color:#8B949E;">Designed and simulated a 180 nm CMOS Capacitance-to-Digital Converter in Cadence Virtuoso. Executed transistor-level AC/transient simulations, device sizing, and parasitic analysis.</p>
+<p style="padding: 10px 18px; color: #94A3B8;">Designed and simulated a 180 nm CMOS Capacitance-to-Digital Converter in Cadence Virtuoso. Executed transistor-level AC/transient simulations, device sizing, and parasitic analysis.</p>
 </details>
 
 <details>
-<summary style="cursor:pointer; font-size:14px; font-weight:bold; color:#34D399;">
-  <b>🏢 May 2025 – Jun 2025 ── Embedded Systems Intern // Phoenix Soft Tech</b>
+<summary style="cursor: pointer; padding: 12px 18px; background: #0A0F1D; border: 1.5px solid #34D399; border-radius: 14px; margin-bottom: 8px; list-style: none;">
+  <span style="font-size: 14px; font-weight: bold; color: #34D399;">🏢 May 2025 – Jun 2025 ── Embedded Systems Intern // Phoenix Soft Tech</span>
 </summary>
-<p style="padding-left:15px; color:#8B949E;">Developed firmware routines for microcontroller peripherals (SPI/I2C/UART) and integrated sensor acquisition modules with low-power embedded processing workflows.</p>
+<p style="padding: 10px 18px; color: #94A3B8;">Developed firmware routines for microcontroller peripherals (SPI/I2C/UART) and integrated sensor acquisition modules with low-power embedded processing workflows.</p>
 </details>
 
 <br>

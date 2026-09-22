@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 160" width="100%" height="100%">
+  <defs>
+    <style>
+      @keyframes floatDomain {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+      .domain-card {
+        fill: #080D1A;
+        stroke-width: 1.8;
+        rx: 20px;
+      }
+      .title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14.5px;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-anchor: middle;
+      }
+      .desc-bold {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        fill: #E2E8F0;
+        text-anchor: middle;
+      }
+      .desc-sub {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10.5px;
+        fill: #94A3B8;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- 4 Curvy Floating Galaxy Domain Cards -->
+  <g style="animation: floatDomain 4.5s ease-in-out infinite;">
+    <!-- Card 1: VLSI & FAB -->
+    <g transform="translate(5, 5)">
+      <rect width="220" height="150" class="domain-card" stroke="#F59E0B" style="filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.35));" />
+      <circle cx="110" cy="34" r="16" fill="#1E1B4B" stroke="#F59E0B" stroke-width="1.2" />
+      <text x="110" y="39" font-size="14" text-anchor="middle">⚡</text>
+      <text x="110" y="68" class="title" fill="#F59E0B">VLSI &amp; FAB</text>
+      <text x="110" y="92" class="desc-bold">22nm FinFET • 180nm CMOS</text>
+      <text x="110" y="110" class="desc-sub">6T SRAM Bitcell • PVT Corners</text>
+      <text x="110" y="126" class="desc-sub">KLayout • SEMulator3D</text>
+    </g>
+
+    <!-- Card 2: RTL DESIGN -->
+    <g transform="translate(240, 5)">
+      <rect width="220" height="150" class="domain-card" stroke="#38BDF8" style="filter: drop-shadow(0 4px 12px rgba(56, 189, 248, 0.35));" />
+      <circle cx="110" cy="34" r="16" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+      <text x="110" y="39" font-size="14" text-anchor="middle">💻</text>
+      <text x="110" y="68" class="title" fill="#38BDF8">RTL DESIGN</text>
+      <text x="110" y="92" class="desc-bold">SystemVerilog • Verilog • VHDL</text>
+      <text x="110" y="110" class="desc-sub">Pipelined Datapaths • FSMs</text>
+      <text x="110" y="126" class="desc-sub">Static Timing &amp; CDC Analysis</text>
+    </g>
+
+    <!-- Card 3: VERIFICATION -->
+    <g transform="translate(475, 5)">
+      <rect width="220" height="150" class="domain-card" stroke="#34D399" style="filter: drop-shadow(0 4px 12px rgba(52, 211, 153, 0.35));" />
+      <circle cx="110" cy="34" r="16" fill="#064E3B" stroke="#34D399" stroke-width="1.2" />
+      <text x="110" y="39" font-size="14" text-anchor="middle">🔍</text>
+      <text x="110" y="68" class="title" fill="#34D399">VERIFICATION</text>
+      <text x="110" y="92" class="desc-bold">Synopsys VCS • Verdi</text>
+      <text x="110" y="110" class="desc-sub">Cadence Xcelium &amp; Spectre</text>
+      <text x="110" y="126" class="desc-sub">SVA Assertions • Zero Violations</text>
+    </g>
+
+    <!-- Card 4: FPGA & EDGE AI -->
+    <g transform="translate(710, 5)">
+      <rect width="225" height="150" class="domain-card" stroke="#A855F7" style="filter: drop-shadow(0 4px 12px rgba(168, 85, 247, 0.35));" />
+      <circle cx="112" cy="34" r="16" fill="#3B0764" stroke="#A855F7" stroke-width="1.2" />
+      <text x="112" y="39" font-size="14" text-anchor="middle">🚀</text>
+      <text x="112" y="68" class="title" fill="#A855F7">FPGA &amp; EDGE AI</text>
+      <text x="112" y="92" class="desc-bold">PolarFire SoC (RISC-V)</text>
+      <text x="112" y="110" class="desc-sub">Neuromorphic SNN Inference</text>
+      <text x="112" y="126" class="desc-sub">AMD Xilinx Vivado</text>
+    </g>
+  </g>
+</svg>

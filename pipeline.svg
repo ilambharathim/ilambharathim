@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 130" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #0D1117; }
+      .box { fill: #161B22; stroke: #30363D; stroke-width: 1.2; rx: 6px; }
+      .box-active { fill: #161B22; stroke: #58A6FF; stroke-width: 1.5; rx: 6px; }
+      .title { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10.5px; font-weight: 700; fill: #F0F6FC; text-anchor: middle; letter-spacing: 0.5px; }
+      .sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 8.5px; fill: #8B949E; text-anchor: middle; }
+      .arrow { stroke: #58A6FF; stroke-width: 1.5; fill: none; }
+      .arrow-head { fill: #58A6FF; }
+      .flow-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: #3FB950; letter-spacing: 1px; }
+      .accent-dot { fill: #3FB950; }
+    </style>
+    <marker id="arrow-dark" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#58A6FF"/>
+    </marker>
+  </defs>
+
+  <rect width="920" height="130" rx="8" class="bg" stroke="#30363D" stroke-width="1"/>
+
+  <!-- Header line inside SVG -->
+  <circle cx="22" cy="22" r="3.5" class="accent-dot" />
+  <text x="34" y="25" class="flow-label">VLSI &amp; ASIC / FPGA IMPLEMENTATION FLOW</text>
+  <line x1="20" y1="35" x2="900" y2="35" stroke="#21262D" stroke-width="1" />
+
+  <!-- Stages (7 stages, width ~112px each, gap 14px) -->
+  <!-- Stage 1: SPECIFICATION -->
+  <g transform="translate(15, 48)">
+    <rect width="110" height="65" class="box" />
+    <text x="55" y="26" class="title">SPECIFICATION</text>
+    <text x="55" y="42" class="sub">Micro-Arch &amp; PPA</text>
+    <text x="55" y="54" class="sub">Functional Spec</text>
+  </g>
+  <path d="M 125 80 L 138 80" class="arrow" marker-end="url(#arrow-dark)" />
+
+  <!-- Stage 2: RTL DESIGN -->
+  <g transform="translate(144, 48)">
+    <rect width="110" height="65" class="box-active" />
+    <text x="55" y="26" class="title" fill="#58A6FF">RTL DESIGN</text>
+    <text x="55" y="42" class="sub">SystemVerilog / VHDL</text>
+    <text x="55" y="54" class="sub">FSM &amp; Datapath</text>
+  </g>
+  <path d="M 254 80 L 267 80" class="arrow" marker-end="url(#arrow-dark)" />
+
+  <!-- Stage 3: SIMULATION -->
+  <g transform="translate(273, 48)">
+    <rect width="110" height="65" class="box" />
+    <text x="55" y="26" class="title">SIMULATION</text>
+    <text x="55" y="42" class="sub">Xcelium / VCS / Questa</text>
+    <text x="55" y="54" class="sub">Waveform Analysis</text>
+  </g>
+  <path d="M 383 80 L 396 80" class="arrow" marker-end="url(#arrow-dark)" />
+
+  <!-- Stage 4: SYNTHESIS -->
+  <g transform="translate(402, 48)">
+    <rect width="110" height="65" class="box" />
+    <text x="55" y="26" class="title">SYNTHESIS</text>
+    <text x="55" y="42" class="sub">Design Compiler / Vivado</text>
+    <text x="55" y="54" class="sub">Gate-Level Netlist</text>
+  </g>
+  <path d="M 512 80 L 525 80" class="arrow" marker-end="url(#arrow-dark)" />
+
+  <!-- Stage 5: VERIFICATION -->
+  <g transform="translate(531, 48)">
+    <rect width="110" height="65" class="box-active" />
+    <text x="55" y="26" class="title" fill="#3FB950">VERIFICATION</text>
+    <text x="55" y="42" class="sub">Coverage &amp; SVA</text>
+    <text x="55" y="54" class="sub">UVM Testbench / Verdi</text>
+  </g>
+  <path d="M 641 80 L 654 80" class="arrow" marker-end="url(#arrow-dark)" />
+
+  <!-- Stage 6: PHYSICAL DESIGN -->
+  <g transform="translate(660, 48)">
+    <rect width="114" height="65" class="box" />
+    <text x="57" y="26" class="title">PHYSICAL DESIGN</text>
+    <text x="57" y="42" class="sub">Floorplan, Placement</text>
+    <text x="57" y="54" class="sub">CTS, Routing &amp; DRC/LVS</text>
+  </g>
+  <path d="M 774 80 L 787 80" class="arrow" marker-end="url(#arrow-dark)" />
+
+  <!-- Stage 7: HARDWARE / SILICON -->
+  <g transform="translate(793, 48)">
+    <rect width="112" height="65" class="box-active" stroke="#A371F7" />
+    <text x="56" y="26" class="title" fill="#D2A8FF">HARDWARE</text>
+    <text x="56" y="42" class="sub">PolarFire SoC / FPGA</text>
+    <text x="56" y="54" class="sub">Silicon Tapeout</text>
+  </g>
+</svg>

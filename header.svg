@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 230" width="100%" height="100%">
+  <defs>
+    <style>
+      @keyframes pulseGrid {
+        0%, 100% { opacity: 0.12; }
+        50% { opacity: 0.22; }
+      }
+      @keyframes traceFlow {
+        0% { stroke-dashoffset: 120; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes scanLine {
+        0% { transform: translateY(0px); opacity: 0; }
+        10% { opacity: 0.5; }
+        90% { opacity: 0.5; }
+        100% { transform: translateY(220px); opacity: 0; }
+      }
+      @keyframes waveScroll {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -160; }
+      }
+      @keyframes statusBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+
+      .bg { fill: #0D1117; }
+      .grid { stroke: #21262D; stroke-width: 1; opacity: 0.15; }
+      .active-grid { stroke: #58A6FF; stroke-width: 1; animation: pulseGrid 6s ease-in-out infinite; }
+      .trace { stroke: #30363D; stroke-width: 1.5; fill: none; }
+      .trace-flow {
+        stroke: #58A6FF;
+        stroke-width: 1.5;
+        fill: none;
+        stroke-dasharray: 20 80;
+        animation: traceFlow 4s linear infinite;
+      }
+      .trace-green {
+        stroke: #3FB950;
+        stroke-width: 1.5;
+        fill: none;
+        stroke-dasharray: 15 90;
+        animation: traceFlow 5s linear infinite;
+      }
+      .waveform {
+        stroke: #58A6FF;
+        stroke-width: 1.5;
+        fill: none;
+        stroke-dasharray: 8 4;
+        animation: waveScroll 8s linear infinite;
+        opacity: 0.45;
+      }
+      .scan {
+        stroke: #58A6FF;
+        stroke-width: 1;
+        opacity: 0.3;
+        animation: scanLine 8s linear infinite;
+      }
+
+      .text-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: 5px;
+        fill: #F0F6FC;
+      }
+      .text-badge {
+        font-family: 'JetBrains Mono', SFMono-Regular, Consolas, monospace;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        fill: #58A6FF;
+        font-weight: 600;
+      }
+      .text-subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: 0.8px;
+        fill: #7EE787;
+      }
+      .text-desc {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 13.5px;
+        letter-spacing: 0.3px;
+        fill: #8B949E;
+      }
+      .text-mono {
+        font-family: 'JetBrains Mono', SFMono-Regular, Consolas, monospace;
+        font-size: 11px;
+        fill: #8B949E;
+      }
+      .node { fill: #161B22; stroke: #30363D; stroke-width: 1.5; }
+      .node-lit { fill: #58A6FF; }
+      .node-green { fill: #3FB950; }
+      .status-dot { fill: #3FB950; animation: statusBlink 2.5s ease-in-out infinite; }
+    </style>
+
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#58A6FF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="ic-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="30" y2="0" class="grid" />
+      <line x1="0" y1="0" x2="0" y2="30" class="grid" />
+      <circle cx="0" cy="0" r="1" fill="#30363D" />
+    </pattern>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="920" height="230" rx="10" class="bg" stroke="#30363D" stroke-width="1.2"/>
+  
+  <!-- IC Grid Pattern Layer -->
+  <rect width="920" height="230" rx="10" fill="url(#ic-grid)" />
+
+  <!-- Scanning line -->
+  <line x1="10" y1="5" x2="910" y2="5" class="scan" />
+
+  <!-- Circuit Traces & Waveforms -->
+  <!-- Top Right IC Bus -->
+  <path d="M 650 30 L 760 30 L 790 60 L 890 60" class="trace" />
+  <path d="M 650 30 L 760 30 L 790 60 L 890 60" class="trace-flow" />
+  <path d="M 700 45 L 775 45 L 805 75 L 890 75" class="trace" />
+  <path d="M 700 45 L 775 45 L 805 75 L 890 75" class="trace-green" />
+  <path d="M 740 15 L 810 15 L 840 45 L 890 45" class="trace" />
+
+  <!-- IC Bus Nodes -->
+  <circle cx="890" cy="45" r="3.5" class="node" />
+  <circle cx="890" cy="60" r="3.5" class="node" />
+  <circle cx="890" cy="75" r="3.5" class="node" />
+  <circle cx="790" cy="60" r="2.5" class="node-lit" />
+  <circle cx="805" cy="75" r="2.5" class="node-green" />
+
+  <!-- Bottom Circuit Lines -->
+  <path d="M 30 195 L 140 195 L 170 165 L 280 165" class="trace" />
+  <path d="M 30 195 L 140 195 L 170 165 L 280 165" class="trace-flow" />
+  <path d="M 30 210 L 125 210 L 155 180 L 250 180" class="trace" />
+  <circle cx="30" cy="195" r="3" class="node-lit" />
+  <circle cx="30" cy="210" r="3" class="node" />
+
+  <!-- Subtle Digital Clock Waveform in lower-right background -->
+  <path d="M 560 195 L 580 195 L 580 180 L 600 180 L 600 195 L 620 195 L 620 180 L 640 180 L 640 195 L 660 195 L 660 180 L 680 180 L 680 195 L 700 195 L 700 180 L 720 180 L 720 195 L 740 195 L 740 180 L 760 180 L 760 195 L 780 195 L 780 180 L 800 180 L 800 195 L 820 195 L 820 180 L 840 180 L 840 195 L 860 195 L 860 180 L 880 180 L 880 195" class="waveform" />
+  <text x="520" y="191" class="text-mono" font-size="9" fill="#58A6FF" opacity="0.6">CLK_REF</text>
+
+  <!-- Technical Tag / State Badge -->
+  <g transform="translate(50, 42)">
+    <rect width="170" height="22" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <circle cx="14" cy="11" r="3.5" class="status-dot" />
+    <text x="26" y="15" class="text-badge">SYSTEM ACTIVE // RTL</text>
+  </g>
+
+  <!-- Spec / Architecture Tag on Right -->
+  <g transform="translate(675, 125)">
+    <text x="0" y="0" class="text-mono" font-size="10" fill="#8B949E" text-anchor="end">TECH_NODE: 22nm FinFET / 180nm CMOS</text>
+    <text x="0" y="16" class="text-mono" font-size="10" fill="#8B949E" text-anchor="end">TARGET: Microchip PolarFire SoC FPGA</text>
+  </g>
+
+  <!-- Header Main Content -->
+  <g transform="translate(50, 105)">
+    <!-- Main Name -->
+    <text x="0" y="0" class="text-title">ILAM BHARATHI</text>
+
+    <!-- Subtitle -->
+    <text x="2" y="28" class="text-subtitle">ECE Undergraduate • VLSI • RTL Design • FPGA • Hardware Acceleration</text>
+
+    <!-- Secondary line -->
+    <text x="2" y="51" class="text-desc">Building and exploring hardware systems from transistor-level circuits to intelligent edge architectures.</text>
+  </g>
+
+  <!-- Subtle bottom separator line with gradient -->
+  <line x1="50" y1="178" x2="870" y2="178" stroke="url(#lineGrad)" stroke-width="1" />
+
+  <!-- Footer Technical Tags inside header -->
+  <g transform="translate(50, 202)">
+    <text x="0" y="0" class="text-mono">PIPELINE: RTL ➔ SIMULATION ➔ SYNTHESIS ➔ VERIFICATION ➔ HARDWARE</text>
+  </g>
+</svg>

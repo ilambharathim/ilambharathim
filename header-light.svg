@@ -1,150 +1,258 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 250" width="100%" height="100%">
   <defs>
     <style>
-      @keyframes pulseGrid {
-        0%, 100% { opacity: 0.15; }
-        50% { opacity: 0.28; }
+      @keyframes twinkle0 { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.2); } }
+      @keyframes twinkle1 { 0%, 100% { opacity: 0.9; } 50% { opacity: 0.15; } }
+      @keyframes twinkle2 { 0%, 100% { opacity: 0.3; } 35% { opacity: 1; } 70% { opacity: 0.4; } }
+      @keyframes glitterPulse {
+        0%, 100% { opacity: 0.3; transform: scale(0.7) rotate(0deg); }
+        50% { opacity: 1; transform: scale(1.3) rotate(90deg); }
       }
-      @keyframes traceFlow {
-        0% { stroke-dashoffset: 140; }
+      @keyframes circuitPulse {
+        0% { stroke-dashoffset: 200; }
         100% { stroke-dashoffset: 0; }
       }
-      @keyframes scanLine {
-        0% { transform: translateY(0px); opacity: 0; }
-        10% { opacity: 0.4; }
-        90% { opacity: 0.4; }
-        100% { transform: translateY(240px); opacity: 0; }
+      @keyframes chipGlow {
+        0%, 100% { filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.4)); }
+        50% { filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.85)); }
       }
-      @keyframes waveScroll {
+      @keyframes waveRun {
         0% { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: -160; }
-      }
-      @keyframes statusBlink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.3; }
+        100% { stroke-dashoffset: -120; }
       }
 
-      .bg { fill: #F6F8FA; }
-      .grid { stroke: #D0D7DE; stroke-width: 1; opacity: 0.4; }
-      .trace { stroke: #D0D7DE; stroke-width: 1.5; fill: none; }
-      .trace-flow {
-        stroke: #0969DA;
+      .bg { fill: #F8FAFC; }
+      .circuit-base { stroke: #CBD5E1; stroke-width: 1.2; fill: none; }
+      .circuit-glow-blue {
+        stroke: #0284C7;
+        stroke-width: 1.5;
+        fill: none;
+        stroke-dasharray: 30 120;
+        animation: circuitPulse 4s linear infinite;
+        filter: drop-shadow(0 0 4px #0284C7);
+      }
+      .circuit-glow-green {
+        stroke: #059669;
+        stroke-width: 1.5;
+        fill: none;
+        stroke-dasharray: 25 100;
+        animation: circuitPulse 5s linear infinite;
+        filter: drop-shadow(0 0 4px #059669);
+      }
+      .circuit-glow-purple {
+        stroke: #A78BFA;
         stroke-width: 1.5;
         fill: none;
         stroke-dasharray: 20 80;
-        animation: traceFlow 4s linear infinite;
-      }
-      .trace-green {
-        stroke: #1A7F37;
-        stroke-width: 1.5;
-        fill: none;
-        stroke-dasharray: 15 90;
-        animation: traceFlow 5s linear infinite;
-      }
-      .waveform {
-        stroke: #0969DA;
-        stroke-width: 1.5;
-        fill: none;
-        stroke-dasharray: 8 4;
-        animation: waveScroll 8s linear infinite;
-        opacity: 0.55;
-      }
-      .scan {
-        stroke: #0969DA;
-        stroke-width: 1;
-        opacity: 0.2;
-        animation: scanLine 9s linear infinite;
+        animation: circuitPulse 3.5s linear infinite;
+        filter: drop-shadow(0 0 4px #A78BFA);
       }
 
-      .text-title {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        font-weight: 700;
-        font-size: 30px;
-        letter-spacing: 4px;
-        fill: #1F2328;
+      .title-name {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 800;
+        font-size: 34px;
+        letter-spacing: 5px;
+        fill: #0F172A;
+        filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
       }
-      .text-badge {
-        font-family: 'JetBrains Mono', SFMono-Regular, Consolas, monospace;
+      .badge-tag {
+        font-family: 'JetBrains Mono', Consolas, monospace;
         font-size: 10.5px;
-        letter-spacing: 1.2px;
-        fill: #0969DA;
-        font-weight: 600;
+        letter-spacing: 1.5px;
+        fill: #0284C7;
+        font-weight: 700;
       }
-      .text-subtitle {
+      .title-sub {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-weight: 600;
-        font-size: 14.5px;
-        letter-spacing: 0.5px;
-        fill: #1A7F37;
+        font-size: 15px;
+        letter-spacing: 0.6px;
+        fill: #059669;
       }
-      .text-desc {
+      .title-desc {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-weight: 400;
-        font-size: 13px;
-        letter-spacing: 0.2px;
-        fill: #59636E;
+        font-size: 13.5px;
+        letter-spacing: 0.3px;
+        fill: #475569;
       }
-      .text-mono {
-        font-family: 'JetBrains Mono', SFMono-Regular, Consolas, monospace;
+      .mono-label {
+        font-family: 'JetBrains Mono', Consolas, monospace;
         font-size: 10px;
-        fill: #59636E;
+        fill: #64748B;
       }
-      .node { fill: #FFFFFF; stroke: #D0D7DE; stroke-width: 1.5; }
-      .node-lit { fill: #0969DA; }
-      .node-green { fill: #1A7F37; }
-      .status-dot { fill: #1A7F37; animation: statusBlink 2.5s ease-in-out infinite; }
     </style>
 
-    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0969DA" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#0969DA" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#0969DA" stop-opacity="0"/>
+    <linearGradient id="nebula1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#1E1B4B" stop-opacity="0.65"/>
+      <stop offset="80%" stop-color="#0C4A6E" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0.9"/>
     </linearGradient>
 
-    <pattern id="ic-grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="30" y2="0" class="grid" />
-      <line x1="0" y1="0" x2="0" y2="30" class="grid" />
-      <circle cx="0" cy="0" r="1" fill="#D0D7DE" />
-    </pattern>
+    <radialGradient id="coreGlow" cx="80%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
   </defs>
 
-  <rect width="920" height="250" rx="10" class="bg" stroke="#D0D7DE" stroke-width="1.2"/>
-  <rect width="920" height="250" rx="10" fill="url(#ic-grid)" />
-  <line x1="10" y1="5" x2="910" y2="5" class="scan" />
+  <!-- Deep Cosmos Background -->
+  <rect width="940" height="250" rx="12" class="bg" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect width="940" height="250" rx="12" fill="url(#nebula1)"/>
+  <rect width="940" height="250" rx="12" fill="url(#coreGlow)"/>
 
-  <path d="M 650 25 L 760 25 L 790 50 L 890 50" class="trace" />
-  <path d="M 650 25 L 760 25 L 790 50 L 890 50" class="trace-flow" />
-  <path d="M 700 38 L 775 38 L 805 63 L 890 63" class="trace" />
-  <path d="M 700 38 L 775 38 L 805 63 L 890 63" class="trace-green" />
-  <circle cx="890" cy="50" r="3.5" class="node" />
-  <circle cx="890" cy="63" r="3.5" class="node" />
-  <circle cx="790" cy="50" r="2.5" class="node-lit" />
-  <circle cx="805" cy="63" r="2.5" class="node-green" />
+  <!-- Twinkling Stars Layer -->
+  <circle cx="669" cy="43" r="1.0" fill="#0284C7" class="star" style="animation: twinkle0 2.2s ease-in-out 1.2s infinite;" />
+    <circle cx="769" cy="41" r="1.8" fill="#0F172A" class="star" style="animation: twinkle1 1.9s ease-in-out 3.6s infinite;" />
+    <circle cx="447" cy="23" r="1.0" fill="#0F172A" class="star" style="animation: twinkle2 2.7s ease-in-out 1.0s infinite;" />
+    <circle cx="42" cy="158" r="1.2" fill="#0F172A" class="star" style="animation: twinkle0 2.7s ease-in-out 2.6s infinite;" />
+    <circle cx="240" cy="129" r="1.7" fill="#0284C7" class="star" style="animation: twinkle1 1.8s ease-in-out 3.3s infinite;" />
+    <circle cx="840" cy="55" r="1.8" fill="#0F172A" class="star" style="animation: twinkle2 2.1s ease-in-out 1.4s infinite;" />
+    <circle cx="796" cy="101" r="1.1" fill="#0F172A" class="star" style="animation: twinkle0 2.4s ease-in-out 1.6s infinite;" />
+    <circle cx="367" cy="169" r="1.3" fill="#0F172A" class="star" style="animation: twinkle1 2.6s ease-in-out 0.3s infinite;" />
+    <circle cx="142" cy="111" r="1.1" fill="#0284C7" class="star" style="animation: twinkle2 2.9s ease-in-out 1.2s infinite;" />
+    <circle cx="921" cy="235" r="1.4" fill="#0F172A" class="star" style="animation: twinkle0 1.9s ease-in-out 0.8s infinite;" />
+    <circle cx="692" cy="73" r="1.9" fill="#0F172A" class="star" style="animation: twinkle1 3.3s ease-in-out 3.9s infinite;" />
+    <circle cx="902" cy="40" r="1.5" fill="#0F172A" class="star" style="animation: twinkle2 3.2s ease-in-out 1.9s infinite;" />
+    <circle cx="181" cy="109" r="1.4" fill="#0284C7" class="star" style="animation: twinkle0 3.0s ease-in-out 2.7s infinite;" />
+    <circle cx="714" cy="180" r="1.1" fill="#0F172A" class="star" style="animation: twinkle1 2.7s ease-in-out 2.6s infinite;" />
+    <circle cx="265" cy="56" r="1.6" fill="#0F172A" class="star" style="animation: twinkle2 3.4s ease-in-out 1.2s infinite;" />
+    <circle cx="719" cy="157" r="1.3" fill="#0F172A" class="star" style="animation: twinkle0 3.1s ease-in-out 1.4s infinite;" />
+    <circle cx="72" cy="73" r="2.0" fill="#0284C7" class="star" style="animation: twinkle1 2.5s ease-in-out 3.2s infinite;" />
+    <circle cx="82" cy="69" r="2.1" fill="#0F172A" class="star" style="animation: twinkle2 3.0s ease-in-out 2.3s infinite;" />
+    <circle cx="232" cy="182" r="1.6" fill="#0F172A" class="star" style="animation: twinkle0 2.9s ease-in-out 3.6s infinite;" />
+    <circle cx="161" cy="82" r="1.2" fill="#0F172A" class="star" style="animation: twinkle1 2.7s ease-in-out 3.0s infinite;" />
+    <circle cx="779" cy="164" r="1.5" fill="#0284C7" class="star" style="animation: twinkle2 2.4s ease-in-out 2.4s infinite;" />
+    <circle cx="156" cy="145" r="1.6" fill="#0F172A" class="star" style="animation: twinkle0 3.3s ease-in-out 3.0s infinite;" />
+    <circle cx="171" cy="175" r="1.2" fill="#0F172A" class="star" style="animation: twinkle1 2.8s ease-in-out 2.8s infinite;" />
+    <circle cx="409" cy="112" r="1.7" fill="#0F172A" class="star" style="animation: twinkle2 2.2s ease-in-out 1.9s infinite;" />
+    <circle cx="581" cy="235" r="2.1" fill="#0284C7" class="star" style="animation: twinkle0 2.0s ease-in-out 2.8s infinite;" />
+    <circle cx="921" cy="152" r="1.9" fill="#0F172A" class="star" style="animation: twinkle1 2.4s ease-in-out 3.1s infinite;" />
+    <circle cx="315" cy="126" r="1.2" fill="#0F172A" class="star" style="animation: twinkle2 3.0s ease-in-out 0.1s infinite;" />
+    <circle cx="751" cy="82" r="2.2" fill="#0F172A" class="star" style="animation: twinkle0 2.7s ease-in-out 3.1s infinite;" />
+    <circle cx="123" cy="175" r="1.4" fill="#0284C7" class="star" style="animation: twinkle1 2.8s ease-in-out 2.6s infinite;" />
+    <circle cx="171" cy="110" r="1.9" fill="#0F172A" class="star" style="animation: twinkle2 3.1s ease-in-out 2.2s infinite;" />
+    <circle cx="558" cy="15" r="1.7" fill="#0F172A" class="star" style="animation: twinkle0 2.0s ease-in-out 2.0s infinite;" />
+    <circle cx="386" cy="227" r="2.0" fill="#0F172A" class="star" style="animation: twinkle1 2.2s ease-in-out 1.0s infinite;" />
+    <circle cx="595" cy="35" r="1.1" fill="#0284C7" class="star" style="animation: twinkle2 1.9s ease-in-out 2.0s infinite;" />
+    <circle cx="793" cy="151" r="1.9" fill="#0F172A" class="star" style="animation: twinkle0 2.6s ease-in-out 0.6s infinite;" />
+    <circle cx="577" cy="57" r="1.3" fill="#0F172A" class="star" style="animation: twinkle1 2.5s ease-in-out 3.5s infinite;" />
+    <circle cx="231" cy="153" r="1.9" fill="#0F172A" class="star" style="animation: twinkle2 3.0s ease-in-out 2.8s infinite;" />
+    <circle cx="423" cy="186" r="1.8" fill="#0284C7" class="star" style="animation: twinkle0 2.7s ease-in-out 1.8s infinite;" />
+    <circle cx="138" cy="78" r="1.3" fill="#0F172A" class="star" style="animation: twinkle1 2.8s ease-in-out 1.4s infinite;" />
+    <circle cx="250" cy="165" r="1.3" fill="#0F172A" class="star" style="animation: twinkle2 2.9s ease-in-out 0.4s infinite;" />
+    <circle cx="249" cy="32" r="2.1" fill="#0F172A" class="star" style="animation: twinkle0 1.9s ease-in-out 3.5s infinite;" />
+    
 
-  <g transform="translate(40, 24)">
-    <rect width="180" height="22" rx="4" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="1"/>
-    <circle cx="14" cy="11" r="3.5" class="status-dot" />
-    <text x="26" y="15" class="text-badge">SYSTEM ACTIVE // RTL</text>
+  <!-- Flashing Glitter Crosses -->
+  <g transform="translate(180, 45) scale(1.2)" style="animation: glitterPulse 3s ease-in-out 0.5s infinite;">
+      <path d="M 0 -8 Q 0 0 8 0 Q 0 0 0 8 Q 0 0 -8 0 Q 0 0 0 -8" fill="#0284C7" opacity="0.85" />
+      <circle cx="0" cy="0" r="2" fill="#0F172A" />
+    </g>
+    <g transform="translate(780, 40) scale(1.5)" style="animation: glitterPulse 3s ease-in-out 1.2s infinite;">
+      <path d="M 0 -8 Q 0 0 8 0 Q 0 0 0 8 Q 0 0 -8 0 Q 0 0 0 -8" fill="#0284C7" opacity="0.85" />
+      <circle cx="0" cy="0" r="2" fill="#0F172A" />
+    </g>
+    <g transform="translate(620, 195) scale(1.0)" style="animation: glitterPulse 3s ease-in-out 2.0s infinite;">
+      <path d="M 0 -8 Q 0 0 8 0 Q 0 0 0 8 Q 0 0 -8 0 Q 0 0 0 -8" fill="#0284C7" opacity="0.85" />
+      <circle cx="0" cy="0" r="2" fill="#0F172A" />
+    </g>
+    <g transform="translate(880, 170) scale(1.4)" style="animation: glitterPulse 3s ease-in-out 0.8s infinite;">
+      <path d="M 0 -8 Q 0 0 8 0 Q 0 0 0 8 Q 0 0 -8 0 Q 0 0 0 -8" fill="#0284C7" opacity="0.85" />
+      <circle cx="0" cy="0" r="2" fill="#0F172A" />
+    </g>
+    <g transform="translate(110, 210) scale(1.1)" style="animation: glitterPulse 3s ease-in-out 1.8s infinite;">
+      <path d="M 0 -8 Q 0 0 8 0 Q 0 0 0 8 Q 0 0 -8 0 Q 0 0 0 -8" fill="#0284C7" opacity="0.85" />
+      <circle cx="0" cy="0" r="2" fill="#0F172A" />
+    </g>
+    <g transform="translate(480, 25) scale(1.3)" style="animation: glitterPulse 3s ease-in-out 2.5s infinite;">
+      <path d="M 0 -8 Q 0 0 8 0 Q 0 0 0 8 Q 0 0 -8 0 Q 0 0 0 -8" fill="#0284C7" opacity="0.85" />
+      <circle cx="0" cy="0" r="2" fill="#0F172A" />
+    </g>
+    
+
+  <!-- Interconnected Cosmic Circuit Traces -->
+  <!-- Circuit 1: Upper right to center -->
+  <path d="M 550 35 L 680 35 L 720 70 L 860 70" class="circuit-base" />
+  <path d="M 550 35 L 680 35 L 720 70 L 860 70" class="circuit-glow-blue" />
+
+  <!-- Circuit 2: Mid chip bus -->
+  <path d="M 620 50 L 710 50 L 740 85 L 900 85" class="circuit-base" />
+  <path d="M 620 50 L 710 50 L 740 85 L 900 85" class="circuit-glow-green" />
+
+  <!-- Circuit 3: Bottom left constellation trace -->
+  <path d="M 40 215 L 140 215 L 180 185 L 290 185" class="circuit-base" />
+  <path d="M 40 215 L 140 215 L 180 185 L 290 185" class="circuit-glow-purple" />
+  <circle cx="40" cy="215" r="3" fill="#A78BFA" />
+  <circle cx="140" cy="215" r="2.5" fill="#0F172A" />
+  <circle cx="180" cy="185" r="3" fill="#0284C7" />
+  <circle cx="290" cy="185" r="3.5" fill="#059669" />
+
+  <!-- Holographic Silicon Die Graphic on Right Side -->
+  <g transform="translate(740, 100)" class="chip" style="animation: chipGlow 4s ease-in-out infinite;">
+    <!-- Outer IC substrate -->
+    <rect x="-65" y="-50" width="130" height="100" rx="8" fill="url(#chipGrad)" stroke="#0284C7" stroke-width="1.5" />
+    
+    <!-- IC Corner Pins -->
+    <circle cx="-55" cy="-40" r="2" fill="#059669" />
+    <circle cx="-55" cy="40" r="2" fill="#0284C7" />
+    <circle cx="55" cy="-40" r="2" fill="#A78BFA" />
+    <circle cx="55" cy="40" r="2" fill="#FBBF24" />
+
+    <!-- Silicon Core Die -->
+    <rect x="-40" y="-30" width="80" height="60" rx="4" fill="#F8FAFC" stroke="#059669" stroke-width="1" />
+    
+    <!-- Die Labels -->
+    <text x="0" y="-12" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" fill="#0284C7" text-anchor="middle">POLARFIRE SoC</text>
+    <text x="0" y="3" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" text-anchor="middle">RISC-V + SNN</text>
+    <text x="0" y="18" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#059669" text-anchor="middle">22nm FinFET</text>
+    
+    <!-- External Wire Bonds -->
+    <line x1="-65" y1="-20" x2="-78" y2="-20" stroke="#0284C7" stroke-width="1.5" />
+    <line x1="-65" y1="0" x2="-78" y2="0" stroke="#0284C7" stroke-width="1.5" />
+    <line x1="-65" y1="20" x2="-78" y2="20" stroke="#0284C7" stroke-width="1.5" />
+
+    <line x1="65" y1="-20" x2="78" y2="-20" stroke="#0284C7" stroke-width="1.5" />
+    <line x1="65" y1="0" x2="78" y2="0" stroke="#0284C7" stroke-width="1.5" />
+    <line x1="65" y1="20" x2="78" y2="20" stroke="#0284C7" stroke-width="1.5" />
   </g>
 
-  <text x="40" y="88" class="text-title">ILAM BHARATHI</text>
-  <text x="42" y="116" class="text-subtitle">ECE Undergraduate • VLSI • RTL Design • FPGA • Hardware Acceleration</text>
-  <text x="42" y="140" class="text-desc">Building and exploring hardware systems from transistor-level circuits to intelligent edge architectures.</text>
+  <!-- Left Content Area -->
+  <g transform="translate(45, 35)">
+    <!-- Active Status Pill -->
+    <rect width="190" height="24" rx="12" fill="#F1F5F9" stroke="#0284C7" stroke-width="1" opacity="0.9"/>
+    <circle cx="14" cy="12" r="4" fill="#059669" style="animation: twinkle1 2s ease-in-out infinite;" />
+    <text x="26" y="16" class="badge-tag">✧ SILICON &amp; RTL CORE</text>
 
-  <g transform="translate(675, 88)">
-    <rect width="205" height="62" rx="6" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="1" />
-    <text x="14" y="22" class="text-mono" fill="#0969DA" font-weight="bold">DEVICE &amp; ARCHITECTURE</text>
-    <text x="14" y="38" class="text-mono" fill="#24292F">• Node: 22nm FinFET / 180nm</text>
-    <text x="14" y="52" class="text-mono" fill="#24292F">• Target: PolarFire SoC FPGA</text>
+    <!-- Main Name Heading with Space Glow -->
+    <text x="0" y="72" class="title-name">ILAM BHARATHI</text>
+
+    <!-- Subtitle -->
+    <text x="2" y="102" class="title-sub">ECE Undergraduate • VLSI • RTL Design • FPGA • Hardware AI</text>
+
+    <!-- Tagline -->
+    <text x="2" y="126" class="title-desc">Architecting hardware systems from transistor circuits to intelligent edge accelerators.</text>
   </g>
 
-  <line x1="40" y1="172" x2="880" y2="172" stroke="url(#lineGrad)" stroke-width="1" />
+  <!-- Bottom Separator with Gradient -->
+  <line x1="45" y1="198" x2="895" y2="198" stroke="#CBD5E1" stroke-width="1" />
 
-  <g transform="translate(40, 204)">
-    <text x="0" y="0" class="text-mono" fill="#0969DA" font-weight="600">FLOW:</text>
-    <text x="45" y="0" class="text-mono">SPEC ➔ RTL ➔ SIMULATION ➔ SYNTHESIS ➔ VERIFICATION ➔ HARDWARE</text>
+  <!-- Bottom Engineering Flow Badges -->
+  <g transform="translate(45, 222)">
+    <text x="0" y="0" class="mono-label" fill="#0284C7" font-weight="bold">PIPELINE:</text>
+    <text x="65" y="0" class="mono-label">SPEC ➔ RTL DESIGN ➔ SIMULATION ➔ SYNTHESIS ➔ VERIFICATION ➔ SILICON</text>
   </g>
 
-  <path d="M 620 205 L 635 205 L 635 192 L 650 192 L 650 205 L 665 205 L 665 192 L 680 192 L 680 205 L 695 205 L 695 192 L 710 192 L 710 205 L 725 205 L 725 192 L 740 192 L 740 205 L 755 205 L 755 192 L 770 192 L 770 205 L 785 205 L 785 192 L 800 192 L 800 205 L 815 205 L 815 192 L 830 192 L 830 205 L 845 205 L 845 192 L 860 192 L 860 205 L 875 205" class="waveform" />
-  <text x="570" y="202" class="text-mono" font-size="9" fill="#0969DA" opacity="0.7">CLK_REF</text>
+  <!-- Bottom Waveform Clock in Lower Right -->
+  <g transform="translate(650, 220)">
+    <text x="-50" y="0" class="mono-label" fill="#059669">CLK_EDGE</text>
+    <path d="M 15 2 L 28 2 L 28 -8 L 41 -8 L 41 2 L 54 2 L 54 -8 L 67 -8 L 67 2 L 80 2 L 80 -8 L 93 -8 L 93 2 L 106 2 L 106 -8 L 119 -8 L 119 2 L 132 2 L 132 -8 L 145 -8 L 145 2 L 158 2 L 158 -8 L 171 -8 L 171 2 L 184 2 L 184 -8 L 197 -8 L 197 2 L 210 2" stroke="#0284C7" stroke-width="1.5" fill="none" style="stroke-dasharray: 6 3; animation: waveRun 6s linear infinite;" />
+  </g>
 </svg>

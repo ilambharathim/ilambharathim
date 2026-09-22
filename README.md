@@ -30,188 +30,104 @@
 
 ---
 
+## ✨ Featured Projects
+
+<br>
+
+### ⚡ RIVA — RTL Intelligent Verification Assistant
+> SystemVerilog • Logic Simulation • Waveform Analysis • SVA Assertions • ● ACTIVE
+
+- Developing an automated verification framework combining SystemVerilog testbenches, simulation regressions, waveform analysis, and linting rules for specification-driven verification closure.
+- Traces functional discrepancies from testbench assertions directly to failing RTL datapath signals.
+- **Repository:** [github.com/ilambharathim/AI_RTL_ASSISTANT](https://github.com/ilambharathim/AI_RTL_ASSISTANT)
+
 <div align="center">
-  <h2>✨ Projects</h2>
-  <p style="color: #94A3B8; font-size: 13.5px;"><i>Touch or click any floating card below to expand the architectural schematics, waveforms &amp; performance metrics.</i></p>
+  <img src="./waveform_analysis.svg" width="100%" alt="RIVA Waveform Timing Simulation Trace">
 </div>
 
 <br>
 
-<!-- ⚡ PROJECT CARD: RIVA -->
-<details>
-<summary style="list-style: none; cursor: pointer;">
-  <img src="./card_riva.svg" width="100%" alt="RIVA — RTL Intelligent Verification Assistant">
-</summary>
-<table width="100%" style="background: #050811; border: 1.5px solid #38BDF8; border-radius: 18px; padding: 18px; margin-top: 10px;">
-  <tr>
-    <td>
-      <h3 style="color: #38BDF8; margin-top: 0;">RIVA — RTL Intelligent Verification Assistant</h3>
-      <p style="color: #E2E8F0;"><b>Overview:</b> Automated verification framework combining SystemVerilog testbenches, simulation regressions, waveform analysis, and linting rules for specification-driven verification closure.</p>
-      <p><b>Repository:</b> <a href="https://github.com/ilambharathim/AI_RTL_ASSISTANT">github.com/ilambharathim/AI_RTL_ASSISTANT</a></p>
-      <div align="center">
-        <img src="./waveform_analysis.svg" width="100%" alt="RIVA Waveform Timing Simulation Trace">
-      </div>
-      <p style="font-size: 12px; color: #94A3B8;"><b>Verification Status:</b> 100% protocol assertions passing (<code>assert_handshake_valid</code>) across Cadence Xcelium and Synopsys VCS.</p>
-    </td>
-  </tr>
-</table>
-</details>
+---
 
-<br>
+### 🚀 SNN-Based Object Detection — Microchip PolarFire SoC
+> Spiking Neural Networks • PolarFire SoC FPGA • RISC-V Coprocessor • Edge AI Acceleration
 
-<!-- 🚀 PROJECT CARD: SNN -->
-<details>
-<summary style="list-style: none; cursor: pointer;">
-  <img src="./card_snn.svg" width="100%" alt="SNN-Based Object Detection — Microchip PolarFire SoC">
-</summary>
-<table width="100%" style="background: #050811; border: 1.5px solid #A855F7; border-radius: 18px; padding: 18px; margin-top: 10px;">
-  <tr>
-    <td>
-      <h3 style="color: #A855F7; margin-top: 0;">SNN-Based Object Detection — Microchip PolarFire SoC</h3>
-      <p style="color: #E2E8F0;"><b>Overview:</b> Hardware-oriented deployment of Spiking Neural Networks (SNN) on the PolarFire SoC FPGA platform, optimizing spike-timing dynamics and weight quantization for resource-constrained edge vision.</p>
-      <pre>
-  PolarFire SoC FPGA Subsystem:
+- Exploring hardware-oriented deployment of Spiking Neural Networks (SNN) on the PolarFire SoC FPGA platform, optimizing spike-timing dynamics and weight quantization for resource-constrained edge vision.
+- Exploits PolarFire non-volatile flash architecture for near-zero static leakage power while eliminating redundant multiply-accumulate operations during static frames via event-driven spike sparsity.
+
+`
+  PolarFire SoC FPGA Hardware Subsystem:
   ┌────────────────────────┐      AXI4 Bus      ┌────────────────────────────────┐
   │ 4x 64-bit RISC-V Cores │ ◀────────────────▶ │ Neuromorphic SNN Accelerator   │
   │ (Supervisory Control)  │                    │ • Leaky Integrate & Fire (LIF) │
   └────────────────────────┘                    │ • Event-Driven Spike Sparsity  │
                                                 └────────────────────────────────┘
-      </pre>
-      <p style="font-size: 12px; color: #94A3B8;"><b>Energy Optimization:</b> Eliminates redundant multiply-accumulate operations during static frames via event-driven spike sparsity.</p>
-    </td>
-  </tr>
-</table>
-</details>
+`
 
 <br>
 
-<!-- 🔶 PROJECT CARD: SRAM -->
-<details>
-<summary style="list-style: none; cursor: pointer;">
-  <img src="./card_sram.svg" width="100%" alt="22 nm 6T FinFET SRAM Cell">
-</summary>
-<table width="100%" style="background: #050811; border: 1.5px solid #F59E0B; border-radius: 18px; padding: 18px; margin-top: 10px;">
-  <tr>
-    <td>
-      <h3 style="color: #F59E0B; margin-top: 0;">22 nm 6T FinFET SRAM Cell — Area Scaling &amp; Layout</h3>
-      <p style="color: #E2E8F0;"><b>Overview:</b> Designed and analysed a 6-Transistor (6T) FinFET SRAM memory cell to study fin pitch scaling, Static Noise Margins (SNM), and 3D physical process profiles.</p>
-      <ul style="color: #94A3B8;">
-        <li><b>Fin Pitch:</b> 30 nm with minimized parasitic capacitance between adjacent channel fins.</li>
-        <li><b>Read SNM:</b> &gt; 180 mV ensuring non-destructive read operations under process variation.</li>
-        <li><b>Hold SNM:</b> &gt; 280 mV with stable data retention down to {DD,min} = 0.65	ext{V}$.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-</details>
+---
+
+### 🔶 22 nm 6T FinFET SRAM Cell — Area Scaling &amp; Layout
+> 22nm FinFET • 6T SRAM • KLayout • SEMulator3D • Synopsys Custom Compiler
+
+- Designed and analysed a 6-Transistor (6T) FinFET SRAM memory cell to study fin pitch scaling, Static Noise Margins (SNM), and 3D physical process profiles.
+- **Fin Pitch:** 30 nm with minimized parasitic capacitance between adjacent channel fins.
+- **Read SNM:** &gt; 180 mV ensuring non-destructive read operations under process variation.
+- **Hold SNM:** &gt; 280 mV with stable data retention down to {DD,min} = 0.65	ext{V}$.
 
 <br>
 
-<!-- 🟢 PROJECT CARD: CDC -->
-<details>
-<summary style="list-style: none; cursor: pointer;">
-  <img src="./card_cdc.svg" width="100%" alt="180 nm CMOS Capacitance-to-Digital Converter">
-</summary>
-<table width="100%" style="background: #050811; border: 1.5px solid #34D399; border-radius: 18px; padding: 18px; margin-top: 10px;">
-  <tr>
-    <td>
-      <h3 style="color: #34D399; margin-top: 0;">180 nm CMOS Capacitance-to-Digital Converter</h3>
-      <p style="color: #E2E8F0;"><b>Overview:</b> Transistor-level design and simulation of a switched-capacitor CDC with comprehensive AC, transient, and parasitic evaluation across -40°C to 125°C PVT corners.</p>
-      <ul style="color: #94A3B8;">
-        <li><b>Sensitivity:</b> &lt; 0.15% deviation across ±10% {DD}$ supply variations.</li>
-        <li><b>Resolution:</b> Monotonic 10-bit digital representation of micro-capacitive inputs.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-</details>
+---
+
+### 🟢 180 nm CMOS Capacitance-to-Digital Converter
+> Cadence Virtuoso • Spectre • 180nm Bulk CMOS • Switched-Capacitor PVT
+
+- Transistor-level design and simulation of an analog switched-capacitor CDC with comprehensive AC, transient, and parasitic evaluation across -40°C to 125°C PVT corners.
+- **Sensitivity:** &lt; 0.15% deviation across ±10% {DD}$ supply variations.
+- **Resolution:** Monotonic 10-bit digital representation of micro-capacitive sensor inputs.
 
 <br>
 
-<!-- 🔷 PROJECT CARD: PLL -->
-<details>
-<summary style="list-style: none; cursor: pointer;">
-  <img src="./card_pll.svg" width="100%" alt="4.8 GHz PLL Analog &amp; Mixed-Signal Verification">
-</summary>
-<table width="100%" style="background: #050811; border: 1.5px solid #38BDF8; border-radius: 18px; padding: 18px; margin-top: 10px;">
-  <tr>
-    <td>
-      <h3 style="color: #38BDF8; margin-top: 0;">4.8 GHz PLL Analog &amp; Mixed-Signal Verification</h3>
-      <p style="color: #E2E8F0;"><b>Overview:</b> Verified a 4.8 GHz Phase-Locked Loop subsystem validating lock range, settling behavior, jitter performance, and open-loop stability.</p>
-      <ul style="color: #94A3B8;">
-        <li><b>Lock Range:</b> 4.4 GHz to 5.2 GHz with fast settling response (&lt; 1.8 µs).</li>
-        <li><b>Phase Noise:</b> -112 dBc/Hz offset at 1 MHz.</li>
-        <li><b>Phase Margin:</b> 58° open-loop stability margin across all corners.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-</details>
+---
+
+### 🔷 4.8 GHz PLL Analog &amp; Mixed-Signal Verification
+> Cadence Virtuoso • Spectre • PFD / Charge Pump / VCO • Phase Noise • VERIFIED
+
+- Verified a 4.8 GHz Phase-Locked Loop subsystem validating lock range, settling behavior, jitter performance, and open-loop stability.
+- **Lock Range:** 4.4 GHz to 5.2 GHz with fast settling response (&lt; 1.8 µs).
+- **Phase Noise:** -112 dBc/Hz offset at 1 MHz with 58° open-loop phase margin across all corners.
 
 <br>
 
-<!-- 🔴 PROJECT CARD: GESTURE -->
-<details>
-<summary style="list-style: none; cursor: pointer;">
-  <img src="./card_gesture.svg" width="100%" alt="Gesture-to-Speech FPGA System">
-</summary>
-<table width="100%" style="background: #050811; border: 1.5px solid #EC4899; border-radius: 18px; padding: 18px; margin-top: 10px;">
-  <tr>
-    <td>
-      <h3 style="color: #EC4899; margin-top: 0;">Gesture-to-Speech FPGA System</h3>
-      <p style="color: #E2E8F0;"><b>Overview:</b> Offline FPGA hardware translating analog flex-sensor kinematic profiles into synthesized audio indices using a low-latency Verilog FSM with deterministic &lt; 15 ms response.</p>
-    </td>
-  </tr>
-</table>
-</details>
+---
+
+### 🔴 Gesture-to-Speech FPGA System
+> Verilog HDL • AMD Xilinx Vivado • Synchronous FSM • Real-Time DSP
+
+- Offline FPGA hardware translating analog flex-sensor kinematic profiles into synthesized audio indices using a low-latency Verilog FSM with deterministic &lt; 15 ms response.
 
 <br>
 
-<!-- ✨ PROJECT CARD: SEMICON -->
-<details>
-<summary style="list-style: none; cursor: pointer;">
-  <img src="./card_semicon.svg" width="100%" alt="Semiconductor Image Restoration — SEMICON India 2026">
-</summary>
-<table width="100%" style="background: #050811; border: 1.5px solid #10B981; border-radius: 18px; padding: 18px; margin-top: 10px;">
-  <tr>
-    <td>
-      <h3 style="color: #10B981; margin-top: 0;">Semiconductor Image Restoration — SEMICON India 2026</h3>
-      <p style="color: #E2E8F0;"><b>Overview:</b> Single-stage deep learning restoration architecture for degraded Scanning Electron Microscope (SEM) semiconductor inspection signals.</p>
-      <p><b>Repository:</b> <a href="https://github.com/ilambharathim/TEAM-KIRAH_KLA_PSO1">github.com/ilambharathim/TEAM-KIRAH_KLA_PSO1</a></p>
-      <table width="100%">
-        <tr>
-          <th>Metric</th>
-          <th>Baseline</th>
-          <th>TEAM KIRAH NAFNet</th>
-        </tr>
-        <tr>
-          <td><b>PSNR</b></td>
-          <td>29.40 dB</td>
-          <td><b>35.10 dB (+5.70 dB Gain)</b></td>
-        </tr>
-        <tr>
-          <td><b>SSIM</b></td>
-          <td>0.9200</td>
-          <td><b>0.9885 (Edge Preservation)</b></td>
-        </tr>
-        <tr>
-          <td><b>Inference Speed</b></td>
-          <td>12.0 ms</td>
-          <td><b>&lt; 2.4 ms (NVIDIA H100)</b></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-</details>
+---
+
+### ✨ Semiconductor Image Restoration — SEMICON India 2026
+> PyTorch 2.0 • NAFNet • SEM Metrology • 35.10 dB PSNR • KLA Track PS01
+
+- Single-stage deep learning restoration architecture for degraded Scanning Electron Microscope (SEM) semiconductor inspection signals.
+- **Repository:** [github.com/ilambharathim/TEAM-KIRAH_KLA_PSO1](https://github.com/ilambharathim/TEAM-KIRAH_KLA_PSO1)
+
+| Metric | Target Baseline | TEAM KIRAH NAFNet | Gain |
+| :--- | :--- | :--- | :--- |
+| **Peak SNR (PSNR)** | 29.40 dB | **35.10 dB** | **+5.70 dB Gain** |
+| **Structural Similarity (SSIM)** | 0.9200 | **0.9885** | High Edge Fidelity |
+| **Inference Latency (H100)** | 12.0 ms | **&lt; 2.4 ms** | Real-Time Metrology Speed |
 
 <br>
 
 <div align="center">
   <img src="./galaxy_divider.svg" width="100%" alt="Galaxy Divider">
 </div>
-
-<br>
 
 ---
 
@@ -239,34 +155,22 @@
 
 ## 💼 Experience &amp; Research
 
-<details>
-<summary style="cursor: pointer; padding: 14px 20px; background: #0A0F1D; border: 1.5px solid #38BDF8; border-radius: 16px; margin-bottom: 10px; list-style: none;">
-  <span style="font-size: 14.5px; font-weight: bold; color: #38BDF8;">🏢 May 2026 – Jun 2026 ── Research Intern // IIITDM Kancheepuram</span>
-</summary>
-<p style="padding: 10px 18px; color: #94A3B8;">Researched hardware-efficient AI accelerator architectures for edge platforms, studying low-bit quantization and memory bandwidth optimization for resource-constrained inference.</p>
-</details>
+`
+May 2026 – Jun 2026   Research Intern // IIITDM Kancheepuram
+                      • Hardware-efficient AI accelerator architectures & edge quantization.
 
-<details>
-<summary style="cursor: pointer; padding: 14px 20px; background: #0A0F1D; border: 1.5px solid #F59E0B; border-radius: 16px; margin-bottom: 10px; list-style: none;">
-  <span style="font-size: 14.5px; font-weight: bold; color: #F59E0B;">🏢 Oct 2025 – Nov 2025 ── Project Intern // Synopsys Centre of Excellence (CIT)</span>
-</summary>
-<p style="padding: 10px 18px; color: #94A3B8;">Designed and simulated a 180 nm CMOS Capacitance-to-Digital Converter in Cadence Virtuoso. Executed transistor-level AC/transient simulations, device sizing, and parasitic analysis.</p>
-</details>
+Oct 2025 – Nov 2025   Project Intern // Synopsys Centre of Excellence (CIT)
+                      • 180 nm CMOS Capacitance-to-Digital Converter in Cadence Virtuoso & Spectre.
 
-<details>
-<summary style="cursor: pointer; padding: 14px 20px; background: #0A0F1D; border: 1.5px solid #34D399; border-radius: 16px; margin-bottom: 10px; list-style: none;">
-  <span style="font-size: 14.5px; font-weight: bold; color: #34D399;">🏢 May 2025 – Jun 2025 ── Embedded Systems Intern // Phoenix Soft Tech</span>
-</summary>
-<p style="padding: 10px 18px; color: #94A3B8;">Developed firmware routines for microcontroller peripherals (SPI/I2C/UART) and integrated sensor acquisition modules with low-power embedded processing workflows.</p>
-</details>
+May 2025 – Jun 2025   Embedded Systems Intern // Phoenix Soft Tech
+                      • Microcontroller bus interfacing (SPI/I2C/UART) & peripheral firmware.
+`
 
 <br>
 
 <div align="center">
   <img src="./galaxy_divider.svg" width="100%" alt="Galaxy Divider">
 </div>
-
-<br>
 
 ---
 
